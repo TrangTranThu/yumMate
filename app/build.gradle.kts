@@ -57,5 +57,12 @@ dependencies {
     implementation("com.intuit.sdp:sdp-android:1.1.1")
     //gif
     implementation("pl.droidsonroids.gif:android-gif-drawable:1.2.29")
+    //retrofit
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    //converter-gson
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+    //glide
+    implementation("com.github.bumptech.glide:glide:4.13.2")
+
 
 }
