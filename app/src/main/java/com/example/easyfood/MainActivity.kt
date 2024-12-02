@@ -3,7 +3,12 @@ package com.example.easyfood
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.Navigation
+import androidx.navigation.findNavController
+import androidx.navigation.ui.NavigationUI
+import androidx.navigation.ui.setupWithNavController
 import com.example.easyfood.databinding.ActivityMainBinding
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -16,7 +21,15 @@ class MainActivity : AppCompatActivity() {
         // Thiết lập layout của Activity
         setContentView(binding.root)
 
+        // viewPager
+
+        /* action move fragment */
         val bottomNavigation = binding.btmNav
+        val navController = Navigation.findNavController(this, R.id.host_fragment)
+
+        NavigationUI.setupWithNavController(bottomNavigation,navController)
+
+     /*   val bottomNavigation = binding.btmNav
         bottomNavigation.setOnNavigationItemSelectedListener { item ->
             //item.itemId: item là đối tượng của MenuItem mà người dùng đã chọn.
             // Thuộc tính itemId chứa ID của item đó (ví dụ R.id.homeFragment).
@@ -40,5 +53,7 @@ class MainActivity : AppCompatActivity() {
                 else -> false
             }
         }
+*/
+
     }
 }
