@@ -20,7 +20,7 @@ class HomeViewModel :ViewModel() {
             override fun onResponse(call: Call<MealList>, response: Response<MealList>) {
                 if (response.body() != null) {
                     val randomMeal: Meal = response.body()!!.meals[0]
-//                    Log.d("TEST", "meal id ${randomMeal.idMeal} name ${randomMeal.strMeal}")
+                    randomMealLiveData.value = randomMeal
                 } else {
                     return
                 }
