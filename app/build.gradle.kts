@@ -64,5 +64,10 @@ dependencies {
     //glide
     implementation("com.github.bumptech.glide:glide:4.13.2")
 
-
+    val lifecycle_version = "2.8.7"
+    // ViewModel
+    implementation("androidx.lifecycle:lifecycle-viewmodel:$lifecycle_version")
+    // LiveData
+    implementation("androidx.lifecycle:lifecycle-livedata:$lifecycle_version")
+    implementation("androidx.arch.lifecycle:extensions:1.1.0")
 }
