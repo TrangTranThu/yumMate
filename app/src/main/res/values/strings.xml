@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">EasyFood</string>
+    <string name="app_name">YumMate</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="home_fragment">Home fragment</string>
     <string name="favorites_fragment">Favorites fragment</string>
