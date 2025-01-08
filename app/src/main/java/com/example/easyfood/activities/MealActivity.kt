@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
 import com.example.easyfood.R
 import com.example.easyfood.databinding.ActivityMealBinding
-import com.example.easyfood.databinding.FragmentHomeBinding
 import com.example.easyfood.fragments.HomeFragment
 
 class MealActivity : AppCompatActivity() {
@@ -13,6 +12,7 @@ class MealActivity : AppCompatActivity() {
     private lateinit var mealName:String
     private lateinit var mealThumb:String
     private lateinit var binding: ActivityMealBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMealBinding.inflate(layoutInflater)
@@ -38,5 +38,4 @@ class MealActivity : AppCompatActivity() {
         mealName = intent.getStringExtra(HomeFragment.Meal_NAME)!!
         mealThumb = intent.getStringExtra(HomeFragment.Meal_THUMB)!!
     }
-
 }

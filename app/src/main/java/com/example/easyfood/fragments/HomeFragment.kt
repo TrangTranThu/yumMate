@@ -18,7 +18,7 @@ class HomeFragment : Fragment() {
 
     private lateinit var binding: FragmentHomeBinding
     private lateinit var homeMvvm: HomeViewModel
-    private lateinit var randomMeal: Meal
+    private lateinit var randomeMeal: Meal
 
     companion object {
         const val Meal_ID = "com.example.easyfood.fragments.idMeal"
@@ -50,25 +50,21 @@ class HomeFragment : Fragment() {
     private fun obRandomMealClick() {
         binding.randomMealCard.setOnClickListener{
             val intent = Intent(activity, MealActivity::class.java)
-            intent.putExtra(Meal_ID, randomMeal.idMeal)
-            intent.putExtra(Meal_NAME, randomMeal.strMeal)
-            intent.putExtra(Meal_THUMB, randomMeal.strMealThumb)
+            intent.putExtra(Meal_ID, randomeMeal.idMeal)
+            intent.putExtra(Meal_NAME, randomeMeal.strMeal)
+            intent.putExtra(Meal_THUMB, randomeMeal.strMealThumb)
             startActivity(intent)
         }
     }
 
     // su dụng để quan sát các thay đổi của data từ ViewModel -> cập nhật UI khi data thay đổi.
     private fun observerRandomMeal() {
-        // homeMvvm: là instance của ViewModel
-        // viewLifecycleOwner: Là object đại diện cho vòng đời of Fragment
-        // object : Observer<Meal>: Đây là 1 object Observer được định nghĩa để lắng nghe các thay đổi của LiveData<Meal>.
-        // Khi có thay đổi trong LiveData, phương thức onChanged() sẽ được gọi.
         homeMvvm.observeRandomMealLiveData().observe(viewLifecycleOwner,
             { meal ->
                 Glide.with(this@HomeFragment)
                     .load(meal!!.strMealThumb)
                     .into(binding.imgRandomMeal)
-                this.randomMeal = meal
+                this.randomeMeal = meal
             })
     }
 }
