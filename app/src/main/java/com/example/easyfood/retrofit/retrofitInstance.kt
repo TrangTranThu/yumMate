@@ -8,7 +8,7 @@ object retrofitInstance {
     // Base URL của Api
 //    private const val BASE_URL = "https://www.themealdb.com/api/json/v1/1/"
 
-    // Tạo một object Retrofit duy nhất (singleton instance)
+    // Tạo 1 object Retrofit duy nhất (singleton instance)
     val api: MealApi by lazy {
         Retrofit.Builder()
             .baseUrl("https://www.themealdb.com/api/json/v1/1/")

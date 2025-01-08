@@ -69,6 +69,7 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <TextView
+                    android:id="@+id/tv_category"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -79,6 +80,7 @@
                     android:textStyle="bold" />
 
                 <TextView
+                    android:id="@+id/tv_area"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -91,7 +93,7 @@
             </LinearLayout>
 
             <TextView
-                android:id="@+id/tv_instructions"
+                android:id="@+id/tv_instructions_steps"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_5sdp"
@@ -110,8 +112,8 @@
                 android:layout_marginStart="@dimen/_5sdp"
                 android:layout_marginTop="@dimen/_2sdp"
                 android:textColor="@color/black"
-                app:layout_constraintStart_toStartOf="@id/tv_instructions"
-                app:layout_constraintTop_toBottomOf="@id/tv_instructions" />
+                app:layout_constraintStart_toStartOf="@id/tv_instructions_steps"
+                app:layout_constraintTop_toBottomOf="@id/tv_instructions_steps" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>
 

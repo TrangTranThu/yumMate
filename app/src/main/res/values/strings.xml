@@ -4,4 +4,6 @@
     <string name="home_fragment">Home fragment</string>
     <string name="favorites_fragment">Favorites fragment</string>
     <string name="categories_fragment">Categories fragment</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

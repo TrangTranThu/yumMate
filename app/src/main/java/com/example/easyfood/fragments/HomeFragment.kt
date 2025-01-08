@@ -43,7 +43,6 @@ class HomeFragment : Fragment() {
 
         homeMvvm.getRandomMeal()
         observerRandomMeal()
-
         obRandomMealClick()
     }
 
